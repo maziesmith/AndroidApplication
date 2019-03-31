@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment2</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="google_sign_up">Sign in with Google</string>
+    <string name="facebook_app_id">321442545123255</string>
+    <string name="fb_login_protocol_scheme">fb321442545123255</string>
+</resources>

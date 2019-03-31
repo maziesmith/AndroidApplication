@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Orders_Activity">
+
+    <android.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivSignOutOrders"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/signout"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/ivLibraryOrders"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/books_icon"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/ivSignOutOrders"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/ivSearchOrders"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toStartOf="@id/ivLibraryOrders"
+                android:src="@drawable/search"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+
+    </android.widget.Toolbar>
+    <EditText
+        android:id="@+id/etSearchOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_search_button"
+        android:drawablePadding="10dp"
+        android:hint="Search..."
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:textSize="25sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/filter_button" />
+
+        <Button
+            android:id="@+id/btnSort"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+
+            android:drawableTop="@drawable/sort_button" />
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orders_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp" />
+</LinearLayout>

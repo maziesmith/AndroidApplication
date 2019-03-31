@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5"
+    android:orientation="vertical">
+
+    <android.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivSignOutLibrary"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/signout" />
+
+            <ImageView
+                android:id="@+id/ivShoppingLibrary"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/shopping_cart_button"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/ivSignOutLibrary"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/ivSearchLibrary"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toStartOf="@id/ivShoppingLibrary"
+                android:src="@drawable/search"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+
+    </android.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_search_button"
+        android:drawablePadding="10dp"
+        android:hint="Search..."
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:textSize="25sp"
+        android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:drawableTop="@drawable/filter_button"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnSort"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:drawableTop="@drawable/sort_button"
+
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/books_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

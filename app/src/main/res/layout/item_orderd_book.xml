@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="5dp"
+    android:id="@+id/cardviewIDOrder">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivBookCover"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/elon_musk" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ivBookCover"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"/>
+        <TextView
+            android:id="@+id/txtAuthor"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@+id/txtTitle"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/txtTitle"
+            android:text="Author"
+            android:textSize="18sp"
+            android:autoSizeTextType="uniform"/>
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAuthor"
+            android:layout_alignStart="@+id/txtTitle"
+            android:layout_marginTop="5dp"
+            android:autoSizeTextType="uniform"
+            android:text="Date"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDate"
+            android:layout_alignStart="@+id/txtTitle"
+            android:layout_marginTop="5dp"
+            android:autoSizeTextType="uniform"
+            android:text="Paid"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/btnReview"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignRight="@id/btnDownload"
+            android:background="@drawable/round_button"
+            android:layout_above="@id/btnDownload"
+            android:textSize="10sp"
+            android:text="Add Review"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingTop="3dp"
+            android:drawableTop="@drawable/download_button"
+            android:background="@drawable/round_button"
+/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
